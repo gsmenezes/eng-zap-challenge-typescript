@@ -1,8 +1,11 @@
 import React from "react";
 
-export const App: React.FC = () => {
+import GlobalStyles from "./Styles/GlobalStyles";
+
+const App: React.FC = () => {
   return (
     <>
+      <GlobalStyles />
       <h1> Teste Grupo Zap</h1>
     </>
   );
