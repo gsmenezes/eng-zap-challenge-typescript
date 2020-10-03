@@ -4,7 +4,7 @@ export const Container = styled.div`
 grid-area: CT;
 background-color: #FFF;
 padding: 10px;
-height: calc(100vh - 80px);
+height: calc(100vh - 140px);
 overflow-y: scroll;
 
 ::-webkit-scrollbar{
@@ -12,12 +12,12 @@ overflow-y: scroll;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: #0A5A80;
+    background-color: #56BAA2;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #C8D419;
+    background-color: #0A5A80;
 }
 
 `;

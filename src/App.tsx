@@ -1,12 +1,16 @@
 import React from "react";
 
+import LayoutPage from "./Components/LayoutPage";
+
 import GlobalStyles from "./Styles/GlobalStyles";
 
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <h1> Teste Grupo Zap</h1>
+      <LayoutPage>
+        <h1> Teste Grupo Zap</h1>
+      </LayoutPage>
     </>
   );
 };
