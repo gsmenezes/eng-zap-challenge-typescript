@@ -7,15 +7,11 @@ export interface IProperty {
     parkingSpaces: number;
     updatedAt: string;
     owner: boolean;
-    images: IPropertyImages[];
+    images: string[];
     address: IPropertyLocal[];
     bathrooms: number;
     bedrooms: number;
     pricingInfos: IPropertyValues[];
-}
-
-export interface IPropertyImages {
-    images: string;
 }
 
 export interface IPropertyLocal {

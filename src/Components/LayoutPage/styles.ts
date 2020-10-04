@@ -10,4 +10,8 @@ grid-template-areas:
 'FT';
 height: 100vh;
 overflow: hidden;
+
+@media(max-width:768px) {
+    grid-template-rows: 80px auto 65px;
+}
 `;

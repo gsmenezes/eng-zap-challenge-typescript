@@ -8,6 +8,10 @@ left: 0;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+
+@media(max-width:768px){
+    display: inherit;
+}
 `;
 
 export const Logo = styled.div`
@@ -36,8 +40,6 @@ display: flex;
 `
 
 export const Social = styled.div`
-
-
 
 >a {
     text-decoration: none;

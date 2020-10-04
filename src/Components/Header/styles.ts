@@ -5,34 +5,21 @@ grid-area: HD;
 background-color: #0A5A80;
 top:0;
 left: 0;
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+padding-top: 5px;
+
 `;
 
 export const Logo = styled.div`
+text-align: center;
+margin-top: 8px;
 
 >img {
-    width: 100%;
+    width: 356px;
+    max-width: 360px;
+
+    @media (max-width: 768px){
+        width: 70%;
+    }
 }
 `;
 
-export const Button1 = styled.button`
-color: #FFF;
-font-size: 14px;
-height: 50px;
-width: 100px;
-border: 2px solid #FFF;
-border-radius: 4px;
-background-color: transparent;
-`;
-
-export const Button2 = styled.button`
-color: #FFF;
-font-size: 14px;
-height: 50px;
-width: 100px;
-border: 2px solid #FFF;
-border-radius: 4px;
-background-color: transparent;
-`;

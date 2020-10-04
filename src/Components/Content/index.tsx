@@ -1,11 +1,14 @@
 import React from "react";
+import Cards from "../Cards";
 
 import { Container } from './styles';
 
-const Content: React.FC = ({ children }) => {
+const Content: React.FC = () => {
   return (
     <>
-      <Container>{children}</Container>
+      <Container>
+        <Cards />
+      </Container>
     </>
   );
 };
