@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import api from "../../Services/apiservices";
 
 import { IProperty } from "../../Services/IPropertyDetails";
+import formatCurrency from "../../Utils/formatCurrency";
 
 import { Container } from "./styles";
 
@@ -11,11 +12,10 @@ interface IPropertyProps {
 }
 
 const Cards = () => {
-  
   const [items, setItems] = useState<Array<IProperty>>([]);
 
   useEffect(() => {
-    api.get('source-1.json').then(response => {
+    api.get("source-1.json").then((response) => {
       setItems(response.data);
     });
   }, []);
@@ -28,23 +28,26 @@ const Cards = () => {
             <img src={item.images[0]} alt="Imagens da propriedade" />
           </div>
           <div className="card-text">
-            <h2>{item.listingStatus}</h2>
-            <p>{item.address.city ? item.address.city : ""}</p>
+            <h2>{item.address.city ? item.address.city : ""}</h2>
+            <p>{formatCurrency.format(item.pricingInfos.price)}</p>
           </div>
           <div className="card-stats">
             <div className="info">
-              <div className="value">R$</div>
-              <div className="type">Info</div>
-            </div>
-            <div className="info border">
               <div className="value">
+                {" "}
                 {item.usableAreas} <sup>m²</sup>
               </div>
-              <div className="type">Info</div>
+              <div className="type">A. Útil</div>
+            </div>
+            <div className="info border">
+              <div className="value"></div>
+              <div className="type"></div>
             </div>
             <div className="info">
               <div className="value">{item.parkingSpaces}</div>
-              <div className="type">Info</div>
+              <div className="type">
+                {item.parkingSpaces === 1 ? "Vaga" : "Vagas"}
+              </div>
             </div>
           </div>
         </div>

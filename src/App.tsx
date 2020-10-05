@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import LayoutPage from "./Components/LayoutPage";
 import Home from "./Pages/Home";
@@ -9,9 +10,11 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
-      <LayoutPage>
-      <Home />
-      </LayoutPage>
+      <BrowserRouter>
+        <LayoutPage>
+          <Route path="/" exact component={Home} />
+        </LayoutPage>
+      </BrowserRouter>
     </>
   );
 };

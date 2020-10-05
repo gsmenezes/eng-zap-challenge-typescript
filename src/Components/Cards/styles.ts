@@ -33,7 +33,7 @@ overflow-y: scroll;
     margin: 35px 2.5% 0px;
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 85px 80px;
+    grid-template-rows: 210px 70px 95px;
     grid-template-areas: "image" "text" "stats";
 
     border-radius: 18px;
@@ -73,13 +73,13 @@ background-size: cover;
 
 .card-text >p{
     color: gray;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 400;
 }
 
 .card-text >h2{
     margin-top: 0px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .card-stats{
