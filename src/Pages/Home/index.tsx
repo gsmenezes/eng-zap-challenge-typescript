@@ -1,15 +1,17 @@
 import React from "react";
 
-import { Container, Zap, VivaReal } from './styles';
+import Content from "../../Components/Content";
+import Cards from "../../Components/Cards";
+
+import { Container } from "./styles";
 
 const Home: React.FC = () => {
   return (
-    <>
-      <Container>
-        <Zap></Zap>
-        <VivaReal></VivaReal>
-      </Container>
-    </>
+    <Container>
+      <Content>
+        <Cards />
+        </Content>
+    </Container>
   );
 };
 

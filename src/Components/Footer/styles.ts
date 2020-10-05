@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-grid-area: FT;
 background-color: #0A5A80;
 bottom:0;
 left: 0;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+position: fixed;
+height: 60px;
+width: 100%;
 
 @media(max-width:768px){
     display: inherit;

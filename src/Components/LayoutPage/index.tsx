@@ -6,12 +6,12 @@ import Footer from "../Footer";
 
 import { Grid } from "./styles";
 
-const LayoutPage: React.FC = ({ children }) => {
+const LayoutPage: React.FC = ({children}) => {
   return (
     <>
       <Grid>
         <Header />
-        <Content>{children}</Content>
+        <Content> {children} </Content>
         <Footer />
       </Grid>
     </>

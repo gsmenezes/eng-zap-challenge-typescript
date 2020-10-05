@@ -9,7 +9,8 @@ export default createGlobalStyle`
 }
 
 html, body, #root {
-height: 100%;
+height: 100vh;
+overflow: hidden;
 }
 
 *, button, input {

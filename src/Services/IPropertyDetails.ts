@@ -8,21 +8,21 @@ export interface IProperty {
     updatedAt: string;
     owner: boolean;
     images: string[];
-    address: IPropertyLocal[];
+    address: IPropertyLocal;
     bathrooms: number;
     bedrooms: number;
-    pricingInfos: IPropertyValues[];
+    pricingInfos: IPropertyValues;
 }
 
 export interface IPropertyLocal {
     city?: string | null | void;
     neighborhood?: string | null | void;
-    geoLocation: IGeolocationProperty[];
+    geoLocation: IGeolocationProperty;
 }
 
 export interface IGeolocationProperty {
     precision: string;
-    location: ILongLat[];
+    location: ILongLat;
 }
 
 export interface ILongLat {

@@ -2,22 +2,38 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 grid-area: CD;
-display: inline-flex;
+display: inline-grid;
 align-items: center;
 justify-content: space-around;
-/* overflow: hidden; */
-width: 100%;
-height: 100%;
+width: 100vw;
+height: calc(100vh - 140px);
+
+overflow-y: scroll;
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #56BAA2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0A5A80;
+}
+
+
 
 @media(max-width: 900px) {
     display: inline-grid;
 }
 
 .card{
-    margin: 0 2.5%;
+    margin: 35px 2.5% 0px;
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
+    grid-template-rows: 210px 85px 80px;
     grid-template-areas: "image" "text" "stats";
 
     border-radius: 18px;
@@ -29,20 +45,25 @@ height: 100%;
 
     @media(max-width: 900px) {
     margin: 10px auto;
+
 }
 }
 
 .card-image{
-    grid-area: image;
-    background: url('http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/images/pic10.jpg');
-border-top-left-radius: 15px;
-border-top-right-radius: 15px;
+grid-area: image;
 background-size: cover;
+
+>img {
+    width: 300px;
+    height: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
 }
 
 .card-text{
     grid-area: text;
-    margin: 25px;
+    margin: 12px;
 }
 
 .card-text .date{
@@ -52,13 +73,13 @@ background-size: cover;
 
 .card-text >p{
     color: gray;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 }
 
 .card-text >h2{
     margin-top: 0px;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .card-stats{
@@ -96,6 +117,7 @@ background-size: cover;
 .card-stats .value {
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
 }
 
 .card-stats .value .sup{
