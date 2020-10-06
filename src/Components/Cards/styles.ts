@@ -2,13 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 grid-area: CD;
-display: inline-grid;
 align-items: center;
 justify-content: space-around;
-width: 100vw;
 height: calc(100vh - 140px);
 
-overflow-y: scroll;
+overflow: auto;
 
 ::-webkit-scrollbar{
     width: 10px;
@@ -29,10 +27,15 @@ overflow-y: scroll;
     display: inline-grid;
 }
 
+.title-header{
+color: #0A5A80;
+font-size: 20px;
+font-weight: 400;
+}
+
 .card{
     margin: 35px 2.5% 0px;
-    display: grid;
-    grid-template-columns: 300px;
+    display: inline-grid;
     grid-template-rows: 210px 70px 95px;
     grid-template-areas: "image" "text" "stats";
 
@@ -41,7 +44,6 @@ overflow-y: scroll;
     text-align: center;
 
     transition: 0.5s ease;
-    cursor: pointer;
 
     @media(max-width: 900px) {
     margin: 10px auto;
@@ -103,6 +105,12 @@ background-size: cover;
     flex-direction: column;
     padding: 10px;
     color: #FFF;
+
+    >a{
+        text-decoration: none;
+        color: #FFF;
+        font-size: 13px;
+    }
 }
 
 .card-stats .border{
@@ -131,3 +139,4 @@ background-size: cover;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
 `;
+

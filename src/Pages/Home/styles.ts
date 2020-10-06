@@ -30,10 +30,13 @@ export const LogoZapImoveis = styled.button`
     border: 2px solid #0A5A80;
     border-radius: 15px;
     box-shadow: 5px 5px 9px rgba(0,0,0,0.9);
-    width: 18%;
+    width: 80%;
     margin: 0 25px;
 >img {
     width: 80%;
+}
+>a {
+    text-decoration: none;
 }
 
 &:hover {  
@@ -47,7 +50,7 @@ export const LogoVivaReal = styled.button`
     border: 2px solid #0A5A80;
     border-radius: 15px;
     box-shadow: 5px 5px 9px rgba(0,0,0,0.9);
-    width: 18%;
+    width: 80%;
     margin: 0 25px;
 
 >img {

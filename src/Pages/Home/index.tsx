@@ -11,6 +11,7 @@ import {
   LogoZapImoveis,
   LogoVivaReal,
 } from "../Home/styles";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -18,12 +19,16 @@ const Home: React.FC = () => {
       <Text>Bem-vindo ao melhor portal de imóveis!</Text>
       <Subtext>Escolha o que mais combina com você:</Subtext>
       <Buttons>
-        <LogoZapImoveis>
-          <img src={LogoZap} alt="Logo Zap Imóveis" />
-        </LogoZapImoveis>
-        <LogoVivaReal>
-          <img src={LogoViva} alt="Logo Viva Real" />
-        </LogoVivaReal>
+        <Link to={{ pathname: "/cards" , state:{type:'zap-imoveis'}}}>
+          <LogoZapImoveis>
+            <img src={LogoZap} alt="Logo Zap Imóveis" />
+          </LogoZapImoveis>
+        </Link>
+        <Link to={{ pathname: "/cards", state:{type:'viva-real'} }}>
+          <LogoVivaReal>
+            <img src={LogoViva} alt="Logo Viva Real" />
+          </LogoVivaReal>
+        </Link>
       </Buttons>
     </Container>
   );
