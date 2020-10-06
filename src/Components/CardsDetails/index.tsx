@@ -31,10 +31,10 @@ const CardsDetails: React.FC = () => {
 
   return (
     <Container>
-      <CardDetails>
-        <Content>
-          <ContentInfo>
-            {items.map((item) => (
+      {items.map((item) => (
+        <CardDetails>
+          <Content>
+            <ContentInfo>
               <Card key={item.id}>
                 <Title>Detalhes da Propriedade</Title>
                 <Price>{formatCurrency.format(item.pricingInfos.price)}</Price>
@@ -61,18 +61,16 @@ const CardsDetails: React.FC = () => {
                     </span>
                   )}
                 </Info>
-                <Link to="/">
+                <Link to="/list">
                   <FaRegCaretSquareLeft size={20} />
                   <p>Voltar à Home</p>
                 </Link>
               </Card>
-            ))}
-          </ContentInfo>
-        </Content>
+            </ContentInfo>
+          </Content>
 
-        <ImagesProperty>
-          {items.map((item) => (
-            <Carousel key={item.id}
+          <ImagesProperty>
+            <Carousel
               className="carousel"
               defaultActiveIndex={0}
               controls={true}
@@ -85,12 +83,12 @@ const CardsDetails: React.FC = () => {
                     src={images}
                     alt="Imagens da propriedade"
                   />
-                  </Carousel.Item>
+                </Carousel.Item>
               ))}
             </Carousel>
-          ))}
-        </ImagesProperty>
-      </CardDetails>
+          </ImagesProperty>
+        </CardDetails>
+      ))}
     </Container>
   );
 };

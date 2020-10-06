@@ -8,12 +8,14 @@ import GlobalStyles from "./Styles/GlobalStyles";
 
 const App: React.FC = () => {
   return (
-    <Router history={History}>
-      <GlobalStyles />
-      <BrowserRouter>
-          <Routes />  
-      </BrowserRouter>
-    </Router>
+    <>
+      <Router history={History}>
+        <GlobalStyles />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </Router>
+    </>
   );
 };
 
