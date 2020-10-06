@@ -97,6 +97,8 @@ background-size: cover;
 .card-stats .info{
     display: flex;
     align-items: center;
+    vertical-align: middle;
+    align-content: center;
     justify-content: center;
     flex-direction: column;
     padding: 10px;

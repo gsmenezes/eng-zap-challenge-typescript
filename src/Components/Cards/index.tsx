@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaCamera } from "react-icons/fa";
 
 import api from "../../Services/apiservices";
-
 import { IProperty } from "../../Services/IPropertyDetails";
+
 import formatCurrency from "../../Utils/formatCurrency";
 
 import { Container } from "./styles";
-
-interface IPropertyProps {
-  items: IProperty[];
-}
 
 const Cards = () => {
   const [items, setItems] = useState<Array<IProperty>>([]);
@@ -34,14 +32,14 @@ const Cards = () => {
           <div className="card-stats">
             <div className="info">
               <div className="value">
-                {" "}
                 {item.usableAreas} <sup>m²</sup>
               </div>
               <div className="type">A. Útil</div>
             </div>
             <div className="info border">
-              <div className="value"></div>
-              <div className="type"></div>
+              <div className="value"><FaCamera size={20}/></div>
+              <div className="type">Ver mais</div>
+              <Link to='/details-property:id'></Link>
             </div>
             <div className="info">
               <div className="value">{item.parkingSpaces}</div>

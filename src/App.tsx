@@ -1,21 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Router } from "react-router-dom";
 
-import LayoutPage from "./Components/LayoutPage";
-import Home from "./Pages/Home";
+import Routes from "./Routes/app.routes";
+import History from "./Services/historyService";
 
 import GlobalStyles from "./Styles/GlobalStyles";
 
 const App: React.FC = () => {
   return (
-    <>
+    <Router history={History}>
       <GlobalStyles />
       <BrowserRouter>
-        <LayoutPage>
-          <Route path="/" exact component={Home} />
-        </LayoutPage>
+          <Routes />  
       </BrowserRouter>
-    </>
+    </Router>
   );
 };
 
