@@ -19,7 +19,7 @@ font-weight: 400;
 }
 
 .card{
-    margin: 35px 2.5% 0px;
+    margin: 35px 2.5% 5%;
     display: inline-grid;
     grid-template-rows: 210px 70px 95px;
     grid-template-areas: "image" "text" "stats";
