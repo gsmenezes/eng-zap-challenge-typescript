@@ -39,7 +39,7 @@ align-items: center;
 
 export const Contacts = styled.div`
 display: flex;
-`
+`;
 
 export const Social = styled.div`
 

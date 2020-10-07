@@ -9,6 +9,20 @@ grid-template-areas:
 'CT'
 'FT';
 
+overflow: auto;
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #56BAA2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #0A5A80;
+}
 
 
 @media(max-width:768px) {

@@ -4,18 +4,31 @@ export const Container = styled.div`
     display: inline;
     align-content: center;
     text-align: center;
-    margin: 0px auto;`;
+    margin: 0px auto;
+    
+    `;
 
 export const Text = styled.h2`
 font-size: 35px;
 margin-top: 25px;
 color: darkblue;
+
+@media(max-width:768px){
+    font-size: 25px;
+    margin: 25px auto;
+}
+
 `;
 
 export const Subtext = styled.h5`
     font-size: 22px;
     margin-top: 20px;
     color: darkblue;
+
+    @media(max-width:768px){
+    font-size: 20px;
+    margin: 20px;
+}
 `;
 
 export const Buttons = styled.div`
@@ -43,6 +56,10 @@ export const LogoZapImoveis = styled.button`
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
+
+@media(max-width:768px){
+    width: 70%;
+}
 `;
 
 export const LogoVivaReal = styled.button`
@@ -60,5 +77,9 @@ export const LogoVivaReal = styled.button`
 &:hover {  
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+@media(max-width:768px){
+    width: 70%;
 }
 `; 

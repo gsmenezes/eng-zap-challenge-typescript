@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Carousel from "react-bootstrap/Carousel";
 
 import { FaBed, FaBath, FaCar, FaRegCaretSquareLeft } from "react-icons/fa";
 
@@ -28,15 +27,18 @@ interface IDetails {
 
 const CardsDetails: React.FC<IDetails> = ({ location }) => {
   const [item] = useState(location.state.item);
-  console.log(location);
+
   return (
     <Container>
       <CardDetails>
         <Content>
           <ContentInfo>
             <Card>
-              <Title>Detalhes da Propriedade</Title>
-              <Price>{formatCurrency.format(item.pricingInfos.price)}</Price>
+              <Title>
+                {item.pricingInfos.businessType === "SALE"
+                  ? "Imóvel para Venda"
+                  : "Imóvel para locação"}
+              </Title>
               <Info>
                 {item.bedrooms >= 1 && (
                   <span>
@@ -59,31 +61,37 @@ const CardsDetails: React.FC<IDetails> = ({ location }) => {
                     {item.parkingSpaces > 1 ? " vagas" : " vaga"}
                   </span>
                 )}
+                <Price>
+                  <p className="value">
+                    {item.pricingInfos.businessType === "SALE"
+                      ? "Valor "
+                      : "Aluguel: "}
+                    {formatCurrency.format(item.pricingInfos.price)}
+                  </p>
+                  <br />
+                  <p className="cond">
+                    {item.pricingInfos.businessType === "RENTAL"
+                      ? "Condomínio: "
+                      : "Condomínio: "}
+                    {formatCurrency.format(item.pricingInfos.monthlyCondoFee)}
+                  </p>
+                </Price>
               </Info>
-              <Link to="/cards">
-                <FaRegCaretSquareLeft size={20} />
-                <p>Voltar à Home</p>
+              <Link to="/">
+                <FaRegCaretSquareLeft size={25} />
+                <p>Voltar à home</p>
               </Link>
             </Card>
           </ContentInfo>
         </Content>
         <ImagesProperty>
-          <Carousel
-            className="carousel"
-            defaultActiveIndex={0}
-            controls={true}
-            indicators={false}
-          >
-            {item.images.map((images) => (
-              <Carousel.Item className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={images}
-                  alt="Imagens da propriedade"
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          <div className="carousel">
+            <ol className="carousel__viewport">
+              <li id="image" className="carousel__slide">
+                <img src={item.images[0]} alt="Imagem da propriedade" />
+              </li>
+            </ol>
+          </div>
         </ImagesProperty>
       </CardDetails>
     </Container>
