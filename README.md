@@ -1,44 +1,84 @@
+# :pencil2: Code Challenge Grupo Zap
+
+This application was developed in response to the test for the Frontend developer position at Group Zap.
+
+The requirements are described in https://grupozap.github.io/cultura/challenges/engineering.html#regras-de-neg%C3%B3cio-que-voc%C3%AA-precisa-implementar
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Running
 
-### `yarn start`
+:small_blue_diamond: yarn - to install dependencies;
 
-Runs the app in the development mode.<br />
+:small_blue_diamond: yarn start - to run app;
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+:small_blue_diamond: yarn build - to run build for deploy app.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Architecture
 
-### `yarn build`
+This app was developed with React Functional components with React Hooks.
+For structures was used:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+:small_blue_diamond: **ReactJs**
+:small_blue_diamond: **StyledComponents**
+:small_blue_diamond: **React-icons**
+:small_blue_diamond: **React Hooks**
+:small_blue_diamond: **React Router DOM**
+:small_blue_diamond: **Axios**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folder Structure
 
-### `yarn eject`
+The folder structure is defined from the src folder which is the baseUrl.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ ```
+src
+  ├ assets
+  | ├ grupo-zap.svg
+  | ├ vivareal.png
+  | └ zap.png
+  ├ Components
+  | ├ Cards
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  | ├ CardsDetails
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  | ├ Content
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  | ├ Footer
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  | ├ Header
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  | ├ LayoutPage
+  | |   ├ index.tsx
+  | |   └ styles.ts
+  ├ Hooks
+  | └  useFetch.tsx
+  ├ Pages
+  | ├ Home
+  | |  ├ index.tsx
+  | |  └ styles.ts
+  ├ Routes
+  | └ app.routes.tsx
+  ├ Services
+  | ├ apiservices.ts
+  | ├ historyService.ts
+  | └ IPropertyDetails.ts
+  ├ Styles
+  | └ GlobalStyles.ts
+  ├ Utils
+  | ├ boundingBox.ts
+  | └ formatCurrency.ts
+  |App.tsx
+  |index.tsx
+  └ reactapp-env.d.ts
+  ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Enjoy :house_with_garden:
